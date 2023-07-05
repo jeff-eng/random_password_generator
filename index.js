@@ -87,7 +87,7 @@ pwLengthSlider.addEventListener('input', event => {
     pwLengthDisplay.textContent = event.target.value;
 });
 
-checkboxContainer.addEventListener('change', (event) => {
+checkboxContainer.addEventListener('change', event => {
     const selectedCharCheckboxes = lowercaseCheckbox.checked + uppercaseCheckbox.checked + numbersCheckbox.checked + symbolsCheckbox.checked;
     
     if (selectedCharCheckboxes === 0) {
@@ -144,11 +144,8 @@ function copyToClipboard(event) {
         return;
     }
     
-    navigator.clipboard.writeText(pw).then(() => {
-        console.log('text copied');
-    }).catch(err => {
-        console.log(err);
-    });
+    // Copy password to clipboard
+    navigator.clipboard.writeText(pw);
 }
 
 function clearPasswords() {
