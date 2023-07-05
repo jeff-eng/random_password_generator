@@ -7,14 +7,5 @@ Random Password Generator built with vanilla JavaScript and CSS. Used CSS variab
 ### Dark mode
 ![project screenshot](images/random_pw_gen_darkmode.png)
 
-## Quick start:
-
-```
-$ npm install
-$ npm start
-```
-
-Head over to https://vitejs.dev/ to learn more about using vite
-
 ## Attributions
 https://www.w3docs.com/snippets/javascript/how-to-randomize-shuffle-a-javascript-array.html
