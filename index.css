@@ -1,0 +1,219 @@
+:root {
+    --bg-color: #ECFDF5;
+    --bg-color-dark: #1f2937;
+    --title-text-color: #2B283A;
+    --title-text-secondary: #10B981;
+    --subtitle-text-color: #6B7280;
+    --gen-pw-btn: #10B981;
+    --gen-pw-textcolor: #FFF;
+    --line-divider: #D5D4D8;
+    --pw-btn-color: #273549;
+    --pw-btn-text-color: #5DEF92;
+
+    --background: var(--bg-color);
+}
+
+.dark-mode {
+    --bg-color: var(--background);
+    --title-text-color: #FFF;
+    --title-text-secondary: #4ADF86;
+    --subtitle-text-color: #D5D4D8;
+    --line-divider: #2F3E53;
+    --pw-btn-text-color: #55F991;
+    
+    --background: var(--bg-color-dark);
+    transition: 0.5s ease-in-out;
+}
+
+/* Dark mode button styling*/
+.dark-mode-toggle, .dark-mode-toggle:focus {
+    position: absolute;
+    z-index: 100;
+    width: 2.0em;
+    height: 2.0em;
+    top: 1em;
+    right: 1em;
+    cursor: pointer;
+    background: none;
+    outline: none;
+    border: none;
+    rotate: 180deg;
+    fill: var(--title-text-color);
+}
+
+body {
+    margin: 0;
+    background-color: var(--background);
+    color: var(--title-text-color);
+    transition: 0.5s ease-in;
+}
+
+h1, h2 {
+    margin: 0;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Inter', sans-serif;
+    margin: 115px 52px auto 52px;
+}
+
+hgroup {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    font-family: 'Karla', sans-serif;
+}
+
+.checkbox, #pw-length-display {
+    font-size: 1em;
+}
+
+.char-checkbox, #pw-slider-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 3px;
+    min-width: 50px;
+}
+
+.pw-btn {
+    color: var(--pw-btn-text-color);
+    background-color: var(--pw-btn-color);
+    width: 211px;
+    min-height: 39px;
+    border: none;
+    border-radius: 6px;
+    margin-top: 39px;
+    overflow-wrap: break-word;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+}
+
+.pw-btn:hover {
+    cursor: pointer;
+    background-color: #525d6d;
+}
+
+.no-focus:focus {
+    outline: none;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    font-style: italic;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 250px;
+    background-color: #171f2b;
+    color: #D5D4D8;
+    text-align: center;
+    border-radius: 6px;
+    padding: 10px 5px 10px;
+    position: absolute;
+    z-index: 1;
+    top: 125%;
+    left: 49%;
+    margin-left: -126px;
+    transition: all 5.0s ease-out;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -15px;
+  border-width: 15px;
+  border-style: solid;
+  border-color: transparent transparent #171f2b transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+#outer-container {
+    max-width: 550px;
+    margin: auto;
+}
+
+#checkbox-outer-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px 0 0;
+}
+
+#pw-settings-container {
+    width: 300px;
+    background: var(--bg-color);
+    border: 1px solid #2F3E53;
+    border-radius: 6px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    margin-right: auto;
+    margin-top: 45px;
+}
+
+#pw-btn-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border-top: 1px solid #2F3E53;
+    margin-bottom: 30px;
+    max-height: fit-content;
+}
+
+#main-heading {
+    font-size: 40px;
+    font-weight: 800;
+    font-style: normal;
+    width: 354px;
+    line-height: 40px;
+    letter-spacing: -1px;
+}
+
+#rand-pw-span {
+    color: var(--title-text-secondary);
+}
+
+#sub-heading {
+    color: var(--subtitle-text-color);
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 28px;
+    margin-top: 10px;
+}
+
+#gen-pw-btn {
+    color: var(--gen-pw-textcolor);
+    background-color: var(--gen-pw-btn);
+    border: none;
+    border-radius: 6px;
+    width: 191px;
+    height: 42px;
+    margin-top: 25px;
+    margin-bottom: 35px;
+    transition: all 0.3s ease-in-out;
+}
+
+#gen-pw-btn:hover {
+    background-color: #0c9467;
+    color: #ECFDF5;
+    cursor: pointer;
+}
+
+#pw-length-display-count {
+    color: #10B981;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+#pw-length-slider {
+    cursor: ew-resize;
+}

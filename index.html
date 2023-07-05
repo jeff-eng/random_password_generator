@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Karla:wght@800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="index.css">
+        <title>Random Password Generator</title>
+    </head>
+    <body>
+        <button id="dark-mode-toggle" class="dark-mode-toggle">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M448 256c0-106-86-192-192-192V448c106 0 192-86 192-192zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256z"/></svg>
+        </button>
+        <div id="outer-container">
+            <main>
+                <hgroup>
+                    <h1 id="main-heading">Generate a <span id="rand-pw-span">random password</span></h1>
+                    <h2 id="sub-heading">Never use an insecure password again.</h2>
+                </hgroup>
+                <aside id="pw-settings-container">
+                    <div id="pw-slider-container">
+                        <p id="pw-length-display">Length <span id="pw-length-display-count">15</span></p>
+                        <input id="pw-length-slider" class="no-focus" value="15" type="range" min="15" max="64"/>
+                    </div>
+                    <div id="checkbox-outer-container">
+                        <div class="checkbox-inner-container">
+                            <div class="char-checkbox">
+                                <label for="uppercase" class="checkbox">A-Z</label>
+                                <input type="checkbox" id="uppercase-checkbox" class="no-focus" name="uppercase" value="uppercase" checked/>
+                            </div>
+                            <div class="char-checkbox">
+                                <label for="lowercase" class="checkbox">a-z</label>
+                                <input type="checkbox" id="lowercase-checkbox" class="no-focus" name="lowercase" value="lowercase" checked/>
+                            </div>
+                        </div>
+                        <div class="checkbox-inner-container">
+                            <div class="char-checkbox">
+                                <label for="numbers" class="checkbox">0-9</label>
+                                <input type="checkbox" id="numbers-checkbox" class="no-focus" name="numbers" value="numbers" checked/>
+                            </div>
+                            <div class="char-checkbox">
+                                <label for="symbols" class="checkbox">!@#$%^&*</label>
+                                <input type="checkbox" id="symbols-checkbox" class="no-focus" name="symbols" value="symbols" checked/>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+                <button id="gen-pw-btn" class="no-focus">Generate passwords</button>
+                <section id="pw-btn-container" class="tooltip">
+                    <span class="tooltiptext">Single-click: copy to clipboard Double-click: clear passwords</span>
+                    <button id="first-pw-btn" class="pw-btn no-focus"></button>
+                    <button id="second-pw-btn" class="pw-btn no-focus"></button>
+                </section>
+            </main>
+        </div>
+        <script src="index.js"></script>
+    </body>
+</html>
