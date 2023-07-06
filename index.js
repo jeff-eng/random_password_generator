@@ -62,7 +62,7 @@ function generatePassword(n, includeLower, includeUpper, includeNum, includeSym)
         return;
     }  
      
-    for (charType of charTypes) {
+    for (const charType of charTypes) {
         // Ensures each type of selected character is generated at least once
         if (charType.usedCount === 0) {
             passwordString += charType.getRandomChar();
